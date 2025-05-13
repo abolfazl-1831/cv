@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <script type="text/javascript">
-      // ریدایرکت به مسیر اصلی
-      (function() {
-        var path = window.location.pathname.replace(/^\//, '');
-        window.location.href = '/' + '#' + path;
-      })();
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      // مسیر فعلی رو ذخیره می‌کنه
+      sessionStorage.redirect = location.pathname + location.search + location.hash;
+      // هدایت به index.html
+      window.location.replace("/");
     </script>
   </head>
   <body></body>
