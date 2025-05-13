@@ -18,6 +18,14 @@
     <link rel="stylesheet" href="/cv/assets/index-4df48632.css">
   </head>
   <body>
+    <script>
+  const redirectPath = sessionStorage.redirect;
+  if (redirectPath) {
+    sessionStorage.removeItem("redirect");
+    window.history.replaceState(null, "", redirectPath);
+  }
+</script>
+
     <!-- ROOT -->
     <div id="root"></div>
     <!-- /ROOT -->
